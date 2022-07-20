@@ -6,7 +6,7 @@
 
 .login {
   height: 100vh;
-  background-image: url(../images/thailand.jpg);
+  background-image: url(../public/thailand.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
