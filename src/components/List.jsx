@@ -2,6 +2,59 @@ import Nav from "./Nav";
 import React from "react"
 
 class List extends React.Component {  
+  state = {
+     houses: [{
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295026/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_01.png",
+      title: "Luxury Villa in Chaweng",
+      description: "jkdbqckjqbkbqevbqekjvnbe;jvbakjbeqkbva;bvekbva",
+      rooms: 3,
+      location: "Koh Samui",
+      price: 350
+     },{
+      img:"https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295026/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_02.png",
+      title: "Private Villa Lotus",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
+      rooms: 3,
+      location: "Koh Phangan",
+      price: 150
+    },{
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_03.png",
+      title: "Seminyak KuDeTa Beach",
+      description:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
+      rooms: 3,
+      location: "Bali",
+      price: 120
+    }, {
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_04.png",
+      title: "5 Bed Villa Canggu",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
+      rooms: 5,
+      location: "Bali",
+      price: 250 
+    }, {
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_05.png",
+      title: "Archie Village House",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
+      rooms: 2,
+      location: "Koh Phangan",
+      price: 80
+    }, {
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_06.png",
+      title :"Luxury 5 Beds Villa",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo…",
+      rooms: 5,
+      location: "Koh Phangan",
+      price: 150
+    }, {
+      img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_07.png",
+      title: "La Casa",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo…",
+      rooms: 1,
+      location: "Koh Phangan", 
+      price: 400
+    }]
+  }
+  
   render() {
     return (
       <>
@@ -72,6 +125,32 @@ class List extends React.Component {
     </form>
   </div>
 </div>
+    
+    <div class="container pt-4">
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
+
+      {/* <div class="col">
+        <div class="card mb-4">
+          <img
+            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2002/house_02_01.png"
+            class="card-img-top" alt="Luxury villa"/>
+          <div class="card-body">
+            <i class="fa-solid fa-location-dot pe-2"></i><small>Koh Samui - 4 Rooms</small>
+            <h5 class="pt-2 pb-2 card-title">Luxury villa in Chaweng</h5>
+            <div class="row">
+              <div class="col">
+                <i class="fa-solid fa-thumbs-up pe-1 text-success"></i><small>2 Reviews</small>
+              </div>
+              <div class="col text-end">
+                <small>$350/night</small>
+              </div>
+              <a href="https://" class="stretched-link"></a> */}
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
     </>)
     }
 }
