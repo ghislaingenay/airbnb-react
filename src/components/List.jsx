@@ -54,6 +54,7 @@ class List extends React.Component {
       price: 400
     }]
   }
+
   
   render() {
     return (
@@ -129,26 +130,28 @@ class List extends React.Component {
     <div class="container pt-4">
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
 
-      {/* <div class="col">
+ {this.state.houses.map( element => {
+      return (<div class="col">
         <div class="card mb-4">
           <img
-            src="https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295027/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2002/house_02_01.png"
+            src={element.img}
             class="card-img-top" alt="Luxury villa"/>
           <div class="card-body">
-            <i class="fa-solid fa-location-dot pe-2"></i><small>Koh Samui - 4 Rooms</small>
-            <h5 class="pt-2 pb-2 card-title">Luxury villa in Chaweng</h5>
+            <i class="fa-solid fa-location-dot pe-2"></i><small>{element.location} - {element.rooms} Rooms</small>
+            <h5 class="pt-2 pb-2 card-title">{element.title}</h5>
             <div class="row">
               <div class="col">
                 <i class="fa-solid fa-thumbs-up pe-1 text-success"></i><small>2 Reviews</small>
               </div>
               <div class="col text-end">
-                <small>$350/night</small>
+                <small>${element.price}/night</small>
               </div>
-              <a href="https://" class="stretched-link"></a> */}
+              <a href="https://" class="stretched-link"></a>
             </div>
           </div>
         </div>
-      </div>
+      </div>)
+ })}
       </div>
       </div>
     </>)
