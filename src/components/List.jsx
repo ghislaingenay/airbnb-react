@@ -1,5 +1,6 @@
 import Nav from "./Nav";
 import React from "react"
+import Card from "./Card"
 
 class List extends React.Component {  
   state = {
@@ -24,28 +25,28 @@ class List extends React.Component {
       rooms: 3,
       location: "Bali",
       price: 120
-    }, {
+    },{
       img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_04.png",
       title: "5 Bed Villa Canggu",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
       rooms: 5,
       location: "Bali",
       price: 250 
-    }, {
+    },{
       img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_05.png",
       title: "Archie Village House",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollit…",
       rooms: 2,
       location: "Koh Phangan",
       price: 80
-    }, {
+    },{
       img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_06.png",
       title :"Luxury 5 Beds Villa",
       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo…",
       rooms: 5,
       location: "Koh Phangan",
       price: 150
-    }, {
+    },{
       img: "https://res.cloudinary.com/dsko6ntfj/image/upload/v1640295019/portal/web%20development%20beginners/05%20Project%20Airbnb/house%2001/house_01_07.png",
       title: "La Casa",
       description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo…",
@@ -55,6 +56,9 @@ class List extends React.Component {
     }]
   }
 
+    // searchTerms = () => {
+      
+    // }
   
   render() {
     return (
@@ -120,7 +124,7 @@ class List extends React.Component {
 
         {/* <!-- Filter - Search button --> */}
         <div className="col col-lg-2 col-md-4 col-sm-12  mb-sm-2">
-          <button type="submit" className="btn btn-success">Search</button>
+          <button onClick ={this.searchTerms} className="btn btn-success">Search</button>
         </div>
       </div>
     </form>
@@ -131,26 +135,7 @@ class List extends React.Component {
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-1">
 
  {this.state.houses.map( element => {
-      return (<div class="col">
-        <div class="card mb-4">
-          <img
-            src={element.img}
-            class="card-img-top" alt="Luxury villa"/>
-          <div class="card-body">
-            <i class="fa-solid fa-location-dot pe-2"></i><small>{element.location} - {element.rooms} Rooms</small>
-            <h5 class="pt-2 pb-2 card-title">{element.title}</h5>
-            <div class="row">
-              <div class="col">
-                <i class="fa-solid fa-thumbs-up pe-1 text-success"></i><small>2 Reviews</small>
-              </div>
-              <div class="col text-end">
-                <small>${element.price}/night</small>
-              </div>
-              <a href="https://" class="stretched-link"></a>
-            </div>
-          </div>
-        </div>
-      </div>)
+      return (<Card element={element} />)
  })}
       </div>
       </div>
